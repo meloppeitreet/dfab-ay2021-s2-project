@@ -1,3 +1,3 @@
-# Digital Fabrication and Prototyping Fundamentals Summative Project Website (Semester 2 AY2021/22)
+# Digital Fabrication and Prototyping Fundamentals (EP1000) Summative Project Website (Semester 2 AY2021/22)
 
 Coming Soon...
