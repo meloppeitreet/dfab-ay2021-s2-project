@@ -228,7 +228,7 @@ textarea:focus {
     left: calc(50% - 10px);
     bottom: -10px;
     width: 20px;
-    height: 20px; 
+    height: 20px;
     background-color: white;
     border-radius: 50%;
 }
@@ -354,7 +354,7 @@ textarea:focus {
 .intro-left {
     margin-right: 20px;
     padding: 30px 40px;
-    max-width: 505px;    
+    max-width: 505px;
 }
 
 .intro-circle-1 {
@@ -386,49 +386,49 @@ textarea:focus {
     margin-bottom: var(--rTitleMarginBottom, 0) !important;
     color:#000;
 }
-  
+
   .text{
     display: var(--textDisplay, inline-flex);
-    font-size: var(--textFontSize, 1rem);  
+    font-size: var(--textFontSize, 1rem);
   }
-  
-  
+
+
   .time{
     display: var(--timeDisplay, inline-flex);
   }
-  
+
   /* extensions */
-  
+
   .time__month{
     margin-left: var(--timelineMounthMarginLeft, .25em);
   }
-  
+
   /* skin */
-  
+
   .time{
     padding: var(--timePadding, .25rem 1.25rem .25rem);
     background-color: var(--timeBackgroundColor, #f0f0f0);
-  
+
     font-size: var(--timeFontSize, .75rem);
     font-weight: var(--timeFontWeight, 700);
     text-transform: var(--timeTextTransform, uppercase);
     color: var(--timeColor, currentColor);
   }
-  
+
   /* card component */
-  
+
   /* core styles */
-  
+
   .card{
     padding: var(--timelineCardPadding, 1.5rem 1.5rem 1.25rem);
   }
-  
+
   .card__content{
     margin-top: var(--cardContentMarginTop, .5rem);
   }
 
   .card__content ul{
-    list-style-type: circle; 
+    list-style-type: circle;
     padding-left: 2em;
   }
 
@@ -436,96 +436,96 @@ textarea:focus {
       padding: 0.5em 0 0.2em;
       color: black;
   }
-  
+
   .card__content p{
     padding-left: 2em;
 }
 
   /* skin */
-  
+
   .card{
     border-radius: var(--timelineCardBorderRadius, 2px);
     border-left: var(--timelineCardBorderLeftWidth, 3px) solid var(--timelineCardBorderLeftColor, var(--uiTimelineMainColor));
     box-shadow: var(--timelineCardBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
     background-color: var(--timelineCardBackgroundColor, #fff);
   }
-  
+
   /* extensions */
-  
+
   .card__title{
     --rTitleMarginTop: var(--cardTitleMarginTop, 1rem);
     font-size: var(--cardTitleFontSize, 1.25rem);
   }
-  
+
   /* Core Styles */
-  
+
   .timeline{
     display: var(--timelineDisplay, grid);
     grid-row-gap: var(--timelineGroupsGap, 2rem);
   }
-  
+
   /* 1. If timeline__year isn't displaed the gap between it and timeline__cards isn't displayed too */
-  
+
   .timeline__year{
     margin-bottom: 1.25rem; /* 1 */
     color: #000;
     font-size:1.5em;
   }
-  
+
   .timeline__cards{
     display: var(--timeloneCardsDisplay, grid);
     grid-row-gap: var(--timeloneCardsGap, 1.5rem);
   }
-  
-  
+
+
   /* skin */
-  
+
   .timeline{
     --uiTimelineMainColor: var(--timelineMainColor, #222);
     --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
-  
+
     border-left: var(--timelineLineWidth, 3px) solid var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
     padding-top: 1rem;
     padding-bottom: 1.5rem;
   }
-  
+
   .timeline__year{
     --timePadding: var(--timelineYearPadding, .5rem 1.5rem);
     --timeColor: var(--uiTimelineSecondaryColor);
     --timeBackgroundColor: var(--uiTimelineMainColor);
     --timeFontWeight: var(--timelineYearFontWeight, 400);
   }
-  
+
   .timeline__card{
     position: relative;
     margin-left: var(--timelineCardLineGap, 1rem);
   }
-  
+
   /* 1. Stoping cut box shadow */
-  
+
   .timeline__cards{
     overflow: hidden;
     padding-top: .25rem; /* 1 */
     padding-bottom: .25rem; /* 1 */
   }
-  
+
   .timeline__card::before{
     content: "";
     width: 100%;
     height: var(--timelineCardLineWidth, 2px);
     background-color: var(--timelineCardLineBackgroundColor, var(--uiTimelineMainColor));
-  
+
     position: absolute;
     top: var(--timelineCardLineTop, 1rem);
     left: -50%;
     z-index: -1;
   }
-  
+
   /* Settings */
   .timeline{
     --timelineMainColor: #99FF66;
   }
-  
+
   .page{
     max-width: 47rem;
     padding: 5rem 2rem 3rem;
@@ -534,10 +534,10 @@ textarea:focus {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
     color: #222;
   }
-  
-  
+
+
   .substack{
-    border:1px solid #EEE; 
+    border:1px solid #EEE;
     background-color: #fff;
     width: 100%;
     max-width: 480px;
@@ -561,29 +561,14 @@ main {
     margin: auto;
 }
 
-@media screen and (max-width: 599px) {
-    img {
-      height: 250px;
-      object-fit: cover;
-    }
+.grid-wrapper {
+    display:grid;
+    grid-auto-flow: column;
+    grid-gap: 1rem;
 }
 
-@media screen and (min-width: 600px) {
-    .grid-wrapper {
-      display: grid;
-      grid-auto-flow: column;
-      grid-gap: 1rem;
-    }
-}
-@media screen and (min-width: 1025px) {
-    .grid-wrapper {
-      grid-template-columns: 1fr 2fr 1fr 2fr;
-    }
-}
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-    .grid-wrapper {
-      grid-template-columns: 1fr 2fr;
-    }
+.grid-wrapper article{
+    margin-top: 0.4em;
 }
 
 article {
@@ -598,4 +583,9 @@ article p {
 article:nth-child(4) {
     grid-area: 0.0416666667;
 }
-  
+
+.timeline-section {
+
+    margin-top: 1.5em;
+
+}
