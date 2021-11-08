@@ -584,6 +584,32 @@ article:nth-child(4) {
     grid-area: 0.0416666667;
 }
 
+article img {
+    border-radius: 10px;
+    margin: 1em 0
+}
+
+article > ul{
+    margin-top: 1rem;
+    border: solid 1px white;
+    padding: 1rem;
+}
+
+article > ul > li{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+article > ul > li > span{
+    font-weight:normal;
+}
+
+article > ul > li > ul{
+    font-weight: normal;
+    list-style-type: circle;
+    padding-left: 2rem;
+}
+
 .timeline-section {
 
     margin-top: 1.5em;
