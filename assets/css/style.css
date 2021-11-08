@@ -7,10 +7,6 @@
 
 ------------------------ */
 
-html{
-    scroll-behavior:smooth;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900');
 body {
     line-height: 24px;
@@ -23,6 +19,10 @@ body {
 }
 
 /* ------------------------ Resetting ------------------------ */
+html{
+    scroll-behavior:smooth;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 	color: #fff;
