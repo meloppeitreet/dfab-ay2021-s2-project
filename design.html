@@ -20,10 +20,15 @@
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
         <!--Modified Styles-->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/information.css" />
 
     </head>
 
     <body>
+
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/img/Snow.mp4" type="video/mp4">
+        </video>
 
         <!-- Navigation Bar -->
         <div class="container-fluid mb-5">
@@ -42,7 +47,7 @@
                                         <div class="circle"></div>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="gallery.html" data-no="2">Gallery</a>
+                                        <a class="nav-link" href="gallery.html" data-no="2">CA2</a>
                                         <div class="circle"></div>
                                     </li>
                                     <li class="nav-item">
@@ -54,7 +59,7 @@
                                         <div class="circle"></div>
                                     </li>
                                     <li class="nav-item selected">
-                                        <a class="nav-link" href="design.html" data-no="4">Design</a>
+                                        <a class="nav-link" href="design.html" data-no="4">Final</a>
                                         <div class="circle"></div>
                                     </li>
                                 </ul>
@@ -63,6 +68,93 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="Final">
+            <h1>Final Module Project: HackVault</h1>
+            <img src="assets/img/Final/FinalHackVault.jpeg"/>
+            <section>
+                <h1>Background</h1>
+                <p>I remembered that during the HTB Cyber Apocalypse CTF 2021, there were a few hardware challenges that required us to have somewhat of an understanding of Intra System Communication Protocols such as Inter Integrated Circuit (I2C) and Serial Peripheral Interface (SPI) communication protocols. Though solving it was easy by playing around with the different channels, I wanted to try to better understand it, which was what made me want to create a vault with the RFID module.</p>
+                <p>I found articles online talking about how it could be done, and the main article that had inspired me to begin on a vault was the article from How To Mechanotronics, titled: How RFID Works and How to make an Arduino based RFID Door Lock.</p>
+            </section>
+            <section>
+                <h1>Project Idea</h1>
+                <img src="assets/img/ProjectConsultation.jpeg" />
+                <p>After consulting with Mr Steven Chew about the project idea, he had introduced spiral development and helped me to confirm that the number of digital pins on the Arduino Nano were sufficient all 5 components.</p>
+                <p>However, it seemed that the RFID module was not available, so the most I tried to aim for was the second ring on the spiral, making it only a requirement of only 4 components.</p>
+            </section>
+            <section>
+                <h1>Design Inspiration</h1>
+                <img src="assets/img/Final/inspiration.png" />
+                <p>However, aside from the 4 components to be connected, there was also a need for consideration of the locking mechanism.</p>
+                <p>As my inspiration for this project stemmed from the articly by How To Mechatronics, although it had used an RFID module, it would appear that I could still use the same locking mechanism as what they had shown on their image.</p>
+            </section>
+            <section>
+                <h1>Bill of Materials</h1>
+                <img src="assets/img/bom.png" />
+                <p></p>
+            </section>
+            <section>
+                <h1>Stage I: Computer-Aided Design</h1>
+                <iframe src="https://ichat2474.autodesk360.com/shares/public/SH35dfcQT936092f0e43aeb16cc4db08a52b?mode=embed" height='610' allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+                <img src="assets/img/Final/lockingmechanism.png" />
+                <p>At first, I had made the thickness of the vault panels to be 9mm, but thankfully due to parametric design, I just needed to change the parameter of the vault's thickness to 3mm.</p>
+                <p>The door lock hole had also been too small, and extra space was added later on in the design to account for slight changes in the movement of the deadbolt.</p>
+            </section>
+            <section>
+                <h1>Stage II: Laser Cutting</h1>
+                <img src="assets/img/Final/LaserCutting2.png" />
+                <p>I then saved the image files as DXF before importing it into Inkscape to change its stroke colours to red for laser cutting. </p>
+                <img src="assets/img/Final/LaserCutting.png" />
+                <p>The laser cutting was done using a slightly transparent acrylic, which seemed weird for a vault, but it seemed to be the only available option and made me change my idea for the vault to be more of a demonstration of the locking mechanism as opposed to an actual vault.</p>
+            </section>
+            <section>
+                <h1>Stage III: 3D Printing</h1>
+                <img src="assets/img/Final/3DPrinting3.png"/>
+                <p>3D printing the locking mechanism. It had to be redone for only the deadbolt holder after realising that the hole for the deadbolt would not allow for any shifts in the position of the deadbolt.</p>
+                <img src="assets/img/Final/3DPrinting1.png"/>
+                <p>3D printing the cover for the LCD display and buzzer on the vault. This had been a later development on another Fusion 360 file as I had yet to be able to estimate the size of the buzzer when creating the initial vault.</p>
+                <img src="assets/img/Final/3DPrinting2.png"/>
+                <p>3D printing the door hinge. However, I believe there had been an issue with how thin I made the surface that attaches to the door and the side face of the vault, causing the bottom of it to sort of tilt upwards while it was 3D printing.</p>
+            </section>
+            <section>
+                <h1>Stage IV: Embedded Programming</h1>
+                <img src="assets/img/Final/Tie.jpeg" />
+                <p>The image that I took inspiration from seemed to use something like a small hook attached to the deadbolt from the servo motor in order for it to be pulled.</p>
+                <p>I had attempted something like that with the use of a safety pin, but had issues when realising that it would be difficult for the deadbolt to be pushed back into the deadbolt holder without the safety pin changing directions and thus being unable to push the deadbolt back.</p>
+                <p>Although the use of a spring would have definitely better served that purpose, it seemed there was little time left to go get one, and so I had gone to the nearest neighbourhood store to purchase cable ties instead.</p>
+                <img src="assets/img/Final/DoorWithServoi.jpeg" />
+                <p>The cable ties were more effective as they would be solid enough to both push and pull the deadbolt from the servo motor. I attached the cable tie to the metal gear on the servo motor using both glue and masking tape.</p>
+                <p>Therefore, it had been a quick small attempt to still get the locking mechanism to work, but thankfully it did work smoothly in the end (seen more clearly in the video).</p>
+                <img src="assets/img/Final/KeypadAndLCD.jpeg" />
+                <p>I then tested to see if the hex keypad, LCD display, and buzzer would work together. This had worked smoothly and the Arduino Nano was attaching to the breadboard without any issues initially.</p>
+                <iframe src=https://create.arduino.cc/editor/meloppeitreet/4e21b695-0caf-4500-be6f-3586eb3117a3/preview?embed style="height:510px" frameborder=0></iframe>
+                <p>Taking reference to some of the library documentations as well as how others have used the libraries online, I then proceeded to combine and modify the code for the Arduino to form the final sketch.</p>
+            </section>
+            <section>
+                <h1>Stage V: Assembly and Testing</h1>
+                <img src="assets/img/Final/DoorHinge1.jpeg"/>
+                <p>I put the door hinge and the door handle/lock support on the front panel of the of the vault and the cut out door. </p>
+                <img src="assets/img/Final/DoorHinge2.jpeg"/>
+                <p>It would have been better to create 2 hinges instead for better door stability, but time was running short and so we made do with one instead.</p>
+                <img src="assets/img/Final/DefaultMessage.jpeg"/>
+                <p>After attaching the Arduino and wiring it to the components, it seemed to be working quite alright.</p>
+                <p>However, it seemed that after some time, the Arduino Nano would fall out of the breadboard on its own and cause everything to stop working. This was especially troubling when the door was in a locked position, but thankfully that had only happened when I hadn't fully attached all panels of the box yet.</p>
+                <p>As such, I had decided to attach the Arduino Nano to the breadboard that it had originally come with, and simply use the longer breadboard for the power supply and ground.</p>
+                <img src="assets/img/Final/EnterPass.jpeg"/>
+                <p>The hex keypad and overall logic of the vault was working thus far, and all seemed well. The user could enter and set their password depending on the position of the servo motor, and the password was being identified correctly.</p>
+                <img src="assets/img/Final/Batteries.jpeg"/>
+                <p>The batteries were then added to see how it would turn out, but the conductor of the wire coming from the battery holder appeared a bit too short, and so I cut away some of the cable jacket. It then began to work after that, but due to it still falling out from time to time, I connected the jumper wire to the battery holder wire using masking tape, which still caused power supply to be slightly unstable when it is moved around. </p>
+            </section>
+            <section>
+                <h1>Stage VI: Presentation and Possible Improvements</h1>
+                <img src="assets/img/Final/HackVault Internal.jpeg"/>
+                <p>Finally all was working well (as long as it was on a flat surface), and the vault was working.</p>
+                <p>However, bringing the vault to SP for presentation had certainly caused it keep restarting due to all the movement. Thankfully, it was still able to reach there in working condition.</p>
+                <p>There is certainly a need to improve on the integration of the final product as the wires are exposed. Having a way to bundle the related wires together may have also been a better idea</p>
+                <p>All in all, now that I have a bit more experience on things to take note of when planning a design from DFAB, I hope that in the future I would be able to start the project earlier and ensure to cover all the problems that could potentially arise in the planning stage instead.</p>
+            </section>
         </div>
 
     </body>

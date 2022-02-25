@@ -715,3 +715,7 @@ article > ul > li > ul{
     color: black;
     display: block;
 }
+
+#projectLogo{
+    margin-top:20%;
+}
