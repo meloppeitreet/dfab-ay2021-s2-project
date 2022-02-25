@@ -24,6 +24,10 @@ p{
     text-align:center;
 }
 
+.CA2 .images {
+    margin-bottom: 5vh;
+}
+
 .CA2 .images img {
     width:30%;
 }
